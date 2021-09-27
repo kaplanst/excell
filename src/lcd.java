@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class split {
+public class lcd {
 
     public static void main(String[] args) {
         System.out.println(prosto(new int[]{1, 1, 6}));
