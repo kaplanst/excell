@@ -1,4 +1,4 @@
-public class exersise1 {
+public class reduceFractions {
 
     public static void main(String[] args) { //Сокращение дробей
         System.out.println(convertFrac(new int[][]{{69, 132}, {88, 1312}, {30, 40}}));
