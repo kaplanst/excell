@@ -1,11 +1,9 @@
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-import java.util.*;
 
 public class factorialsDivisors {
     public static void main(String[] args) {
-        System.out.println(decomp(875));
+        System.out.println(decomp(10));
 
     }
     public static String decomp(int n) {
@@ -14,18 +12,21 @@ public class factorialsDivisors {
         for (int i = 2; i <= n; i++) {
             liCommon.addAll(aray(i));
         }
-        Collections.sort(liCommon);
-        LinkedHashSet<Integer> li2 = new LinkedHashSet<Integer>();
-
-         for (int i = 0; i < liCommon.size(); i++)
-            li2.add(liCommon.get(i));
-
-        System.out.println(li2);
-        List<Integer> li1 = new ArrayList<>(li2);
-        String resume = "";
+        System.out.println(liCommon);
+        List<Integer> li1 = new ArrayList<Integer>();
+        li1.add(liCommon.get(0));
+        for (int i = 1; i < liCommon.size(); i++) {
+            int t = 0;
+            for (int j = 0; j < li1.size(); j++) {
+                if (liCommon.get(i) == li1.get(j)) t++;
+            }
+            if (t == 0) li1.add(liCommon.get(i));
+        }
+        System.out.println(li1);
+        String resume;
         int temp = li1.get(0);
+        int[] baza = new int[li1.size()];
         for (int i = 0; i < li1.size(); i++) {
-            String helper = "";
             for (int j = i; j < li1.size(); j++) {
                 if (li1.get(i) > li1.get(j)) {
                     temp = li1.get(j);
@@ -34,21 +35,13 @@ public class factorialsDivisors {
                 }
 
             }
-            if (schotMnoj(liCommon, li1.get(i)) > 1) helper = "^" + schotMnoj(liCommon, li1.get(i));
-            resume += li1.get(i) + helper;
-            if (i != li1.size()-1) resume +=" * ";
-
+            baza[i] = schotMnoj(liCommon, li1.get(i));
         }
-
-        return resume;
+        return "Ura";
     }
-    public static int schotMnoj(List<Integer> istok, int stepen){
-        int c = 0;
-        int b;
-        for (int i = 0; i < istok.size(); i++) {
-            if (istok.get(i) == stepen) c++;
-        }
-        return c;
+    public static int schotMnoj(List istok, int stepen){
+
+        return 1;
     }
 
     public static List aray(int a) { // Разложим на множители входное число
@@ -63,4 +56,5 @@ public class factorialsDivisors {
         }
         return li;
     }
+
 }
