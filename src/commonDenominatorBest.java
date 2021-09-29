@@ -1,7 +1,5 @@
-import java.util.ArrayList;
-import java.util.List;
 
-public class testClass { // Приведение дроби в массиве к общему знаменателю
+public class commonDenominatorBest { // Приведение дроби в массиве к общему знаменателю
 
     public static void main(String[] args) { // Результат окончательный
         System.out.println(convertFrac(new long[][] {{1, 4}, {3, 6}, {4, 9}, {5, 7}}));
