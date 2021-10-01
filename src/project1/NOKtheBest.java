@@ -1,7 +1,9 @@
+package project1;
+
 public class NOKtheBest {
     public static void main(String[] args) {
 
-        System.out.println(Nok(new int[]{2, 19, 4, 31, 13, 33, 8, 509, 101}));
+        System.out.println(Nok(new int[]{2, 19, 4, 31, 13, 33, 8, 101}));
     }
 public static int Nok(int[] raz){
 

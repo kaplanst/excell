@@ -1,6 +1,6 @@
 public class CountingDuplicates {
     public static void main(String[] args) {
-        System.out.println(duplicateCount("qwer"));
+        System.out.println(duplicateCount("revvvvfffxw"));
     }
 
     public static int duplicateCount(String text) {

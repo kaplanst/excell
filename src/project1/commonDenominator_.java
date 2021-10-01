@@ -3,7 +3,7 @@ package project1;
 import java.util.ArrayList;
 import java.util.List;
 
-public class  commonDenominator { // Приведение дроби в массиве к общему знаменателю
+public class commonDenominator_ { // Приведение дроби в массиве к общему знаменателю
 
     public static void main(String[] args) { // Результат окончательный [1, 1], [3, 1], [4, 1], [5, 1]
         System.out.println(convertFrac(new long[][] {{1, 1}, {3, 1}, {4, 1}, {5, 6}}));
