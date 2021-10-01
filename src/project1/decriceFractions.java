@@ -1,3 +1,4 @@
+package project1;
 public class decriceFractions {
 
     public static void main(String[] args) { //Сокращение дробей

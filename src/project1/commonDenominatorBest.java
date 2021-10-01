@@ -1,4 +1,4 @@
-
+package project1;
 public class commonDenominatorBest { // Приведение дроби в массиве к общему знаменателю
 
     public static void main(String[] args) { // Результат окончательный
