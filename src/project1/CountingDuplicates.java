@@ -1,3 +1,5 @@
+package project1;
+
 public class CountingDuplicates {
     public static void main(String[] args) {
         System.out.println(duplicateCount("revvvvfffxw"));

@@ -1,6 +1,6 @@
 // Java Program to Remove Duplicate Elements
 // From the Array using Set
-
+package project1;
 import java.util.*;
 
 public class removeDuplicate {

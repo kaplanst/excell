@@ -1,8 +1,5 @@
-<<<<<<< HEAD:src/reduceFractions.java
-public class reduceFractions {
-=======
+package project1;
 public class decriceFractions {
->>>>>>> 818b28d (123):src/decriceFractions.java
 
     public static void main(String[] args) { //Сокращение дробей
         System.out.println(convertFrac(new int[][]{{69, 132}, {88, 1312}, {30, 40}}));
