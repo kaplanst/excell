@@ -47,6 +47,10 @@ public class commonDenominatorBest { // Приведение дроби в ма�
 //    public static int prosto(int[] s){ // Находим наименьшее общее кратное
 //        int[][] dubl = new int[s.length][];
 //        for (int i = 0; i < s.length; i++) {
+
+
+
+
 //            dubl[i] = aray(s[i]);
 //        }
 //        List<Integer> li = new ArrayList<Integer>();
