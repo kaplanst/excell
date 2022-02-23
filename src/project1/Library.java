@@ -9,14 +9,14 @@ public class Library {
         String res = "";
         for (String i: lstOf1stLetter) {
             int count = sum(lstOfArt, i);
-            if (count > 0) res += " - (" + i + " : " + count + ")";
+            res += " - (" + i + " : " + count + ")";
         }
         return res.substring(3); //       (A : 200) - (B : 1140)
     }
     public static int sum(String[] lstOfArt, String index) {
         int total = 0;
         for (String lst: lstOfArt) {
-            if (lst.contains(index)) {
+            if (lst.substring(0, 1).equals(index)) {
                 total += Integer.parseInt(lst.substring(lst.indexOf(' ') + 1));
             }
         }
