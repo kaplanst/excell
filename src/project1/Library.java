@@ -7,10 +7,13 @@ public class Library {
     }
     public static String stockSummary(String[] lstOfArt, String[] lstOf1stLetter) {
         String res = "";
+        int zero = 0;
         for (String i: lstOf1stLetter) {
             int count = sum(lstOfArt, i);
             res += " - (" + i + " : " + count + ")";
+            if (count == 0) zero++;
         }
+        if (zero == lstOf1stLetter.length) return "";
         return res.substring(3); //       (A : 200) - (B : 1140)
     }
     public static int sum(String[] lstOfArt, String index) {
