@@ -4,7 +4,8 @@ import java.util.Arrays;
 
 public class MergedString {
     public static void main(String[] args) {
-        System.out.println(isMerge("codewars", "cdwr", "oeas"));
+
+        System.out.println(isMerge("c\\odewar]\"rrs", "cdwrr", "\\oea]\"rs"));
     }
 
 
@@ -14,20 +15,22 @@ public class MergedString {
         int k = 0;
         for (int i = 0; i < part1.length(); i++) {
             for (int j = k; j < s.length(); j++) {
+                if (template[j] != '\0') continue;
                 if (part1.charAt(i) == s.charAt(j)) {
                     template[j] = s.charAt(j);
                     k = j;
-                    continue;
+                    break;
                 }
             }
          }
         k = 0;
         for (int i = 0; i < part2.length(); i++) {
             for (int j = k; j < s.length(); j++) {
+                if (template[j] != '\0') continue;
                 if (part2.charAt(i) == s.charAt(j)) {
                     template[j] = s.charAt(j);
                     k = j;
-                    continue;
+                    break;
                 }
             }
         }
