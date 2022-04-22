@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class MergedString {
     public static void main(String[] args) {
 
-        System.out.println(isMerge("c\\odewar]\"rrs", "cdwrr", "\\oea]\"rs"));
+        System.out.println(isMerge("Can we merge it? Yes, we can!", "an  rge it?,ec", "Cweme Yes w an!"));
     }
 
 
@@ -23,6 +23,13 @@ public class MergedString {
                 }
             }
          }
+        k = 0;
+
+        for (int i = 0; i < part2.length(); i++) {
+            for (int j = k; j < s.length(); j++) {
+
+
+            }}
         k = 0;
         for (int i = 0; i < part2.length(); i++) {
             for (int j = k; j < s.length(); j++) {
