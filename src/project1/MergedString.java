@@ -5,48 +5,37 @@ import java.util.Arrays;
 public class MergedString {
     public static void main(String[] args) {
 
-        System.out.println(isMerge("Can we merge it? Yes, we can!", "an  rge it?,ec", "Cweme Yes w an!"));
+        System.out.println(isMerge("codewars", "cdwr", "oeas"));
     }
-
-
+    // "codewars", "cdwr", "oeas"
+// 'Can we merge it? Yes, we can!' is a merge of 'Cn rge i swa!' and 'a wemet?Ye, e cn'
     public static boolean isMerge(String s, String part1, String part2) {
         if (s.length() != part1.length() + part2.length()) return false;
-        char[] template = new char[s.length()];
-        int k = 0;
-        for (int i = 0; i < part1.length(); i++) {
-            for (int j = k; j < s.length(); j++) {
-                if (template[j] != '\0') continue;
-                if (part1.charAt(i) == s.charAt(j)) {
-                    template[j] = s.charAt(j);
-                    k = j;
-                    break;
+
+        for (int i = 0; i < s.length(); i++) {
+
+            if (part1.charAt(0) == part2.charAt(0) && part1.length() > 1 && part2.length() > 1) {
+                if (s.charAt(i + 1) == part1.charAt(1)) {
+                    part1 = part1.substring(1);
+                    System.out.print(s.charAt(i));
+                } else {
+                    part2 = part2.substring(1);
+                    System.out.print(s.charAt(i));
                 }
+                continue;
             }
-         }
-        k = 0;
 
-        for (int i = 0; i < part2.length(); i++) {
-            for (int j = k; j < s.length(); j++) {
+            if (s.charAt(i) == part1.charAt(0)) {
+                System.out.print(part1.charAt(0));
+                if (part1.length() > 1) part1 = part1.substring(1);
 
-
-            }}
-        k = 0;
-        for (int i = 0; i < part2.length(); i++) {
-            for (int j = k; j < s.length(); j++) {
-                if (template[j] != '\0') continue;
-                if (part2.charAt(i) == s.charAt(j)) {
-                    template[j] = s.charAt(j);
-                    k = j;
-                    break;
-                }
-            }
+            } else if (s.charAt(i) == part2.charAt(0)) {
+                System.out.print(part2.charAt(0));
+                if (part2.length() > 1) part2 = part2.substring(1);
+            } else return false;
         }
-        System.out.println(Arrays.toString(template));
-        if (s.equals(String.valueOf(template))) return true;
-        return false;
 
-
+        return true;
     }
-
 
 }
