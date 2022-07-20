@@ -5,10 +5,11 @@ import java.util.Arrays;
 public class MergedString {
     public static void main(String[] args) {
 
-        System.out.println(isMerge("codewars", "cdwr", "oeas"));
+        System.out.println(isMerge("udRsXusMT$? c%V;t_6r;NY ?2s94b8^7SWh>\\*\\g*cZ2udRsXusMT$? c%V;_eW6FLXU\"(eDVbo<@GS/i5S#P*,95(FOI*.&C>'h?RB6lP/8;[", "udRsXusMT$? c%V;_eW6FLXU\"(eDVbo<@GS/i5S#P", "udRsXusMT$? c%V;t_6r;NY ?2s94b8^7SWh>\\*\\g*cZ2*,95(FOI*.&C>'h?RB6lP/8;["));
     }
-    // "codewars", "cdwr", "oeas"
-// 'Can we merge it? Yes, we can!' is a merge of 'Cn rge i swa!' and 'a wemet?Ye, e cn'
+// 'udRsXusMT$? c%V;t_6r;NY ?2s94b8^7SWh>\*\g*cZ2udRsXusMT$? c%V;_eW6FLXU"(eDVbo<@GS/i5S#P*,95(FOI*.&C>'h?RB6lP/8;['
+// 'udRsXusMT$? c%V;_eW6FLXU"(eDVbo<@GS/i5S#P'
+// 'udRsXusMT$? c%V;t_6r;NY ?2s94b8^7SWh>\*\g*cZ2*,95(FOI*.&C>'h?RB6lP/8;['
     public static boolean isMerge(String s, String part1, String part2) {
         if (s.length() != part1.length() + part2.length()) return false;
         if (s.length() == 0) return true;
