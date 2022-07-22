@@ -7,7 +7,7 @@ import java.util.List;
 public class justTest {
     public static void main(String[] args) {
 
-        System.out.println('A' > 'B');
+
 
     }
 
