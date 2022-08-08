@@ -1,15 +1,20 @@
 package project1;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class justTest {
-    public static void main(String[] args) {
-        String str = "abcdefg";
-    }
-    public static void reverce(String s) {
-        for (int i = s.length()-1; i >= 0; i--) System.out.println(s.charAt(i));
 
+    public static void main(String[] args) {
+        Set<Integer> list = new TreeSet<>();
+        list.add(9);
+        list.add(1);
+        list.add(7);
+        list.add(2);
+        list.add(2);
+        list.add(1);
+
+        ArrayList<Integer> ls = (ArrayList<Integer>) list;
+        ls.get(2);
+        System.out.println(ls.get(2));
     }
 }
