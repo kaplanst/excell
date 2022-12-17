@@ -2,14 +2,14 @@ package project1;
 
 public class DigitsToWords {
     public static void main(String[] args) {
-        System.out.println(millions(5045635004198L));
+        System.out.println(millions(33334323250456350L));
     }
 
     public static String millions(long allDig) {
         if (allDig == 0) return "zero";
         String res = "";
         String[] millionsNames = {
-                "", " thousand", " million", " billion", " trillion"
+                "", " thousand", " million", " billion", " trillion", " quadrillion"
         };
         for (String millionsName : millionsNames) {
             if (allDig % 1000 != 0) res = words((int) (allDig % 1000)) + millionsName + " " + res;
