@@ -5,40 +5,51 @@ import java.util.Arrays;
 
 public class PhoneTest {
     public static void main(String[] args) {
-        System.out.println(phoneWords("555555"));
+        System.out.println(phoneWords("555555344455"));
 
     }
     public static String phoneWords(String str) {
         if (str.length() == 0) return "";
         String result = "";
-        int symNumber = 0;
+        int symNumber = 0; // quantity of symbols
+        int counter = 0;  // number in array commonArr
 
         String[][] digitPanel ={{" "}, {}, {"a", "b","c"}, {"d", "e","f"}, {"g", "h","i"}, {"j", "k","l"},
                 {"m", "n","o"}, {"p", "q","r","s"}, {"t", "u","v"}, {"w", "x","y","z"}};
-        int[] strArray = new int[str.length()];
-        for (int i = 0; i < str.length(); i++) strArray[i] = Character.getNumericValue(str.charAt(i));
-        if (str.length() == 1) return "" + digitPanel[strArray[0]][0];
-        int tempSymbol = strArray[0];
-
+        char tempSymbol = str.charAt(0);
+        int[][] commonArr = new int[str.length()][2];
         for (int i = 1; i < str.length(); i++) {
-            if (tempSymbol == strArray[i]) {
-                if (symNumber == digitPanel[symNumber].length-1) {
-                    symNumber = 0;
-                    result = result + digitPanel[tempSymbol][digitPanel[symNumber].length-1];
-                }
 
-                if (i == str.length() - 1) return result + digitPanel[tempSymbol][symNumber];
+            if (tempSymbol != str.charAt(i)) {
+                commonArr[counter][0] = Character.getNumericValue(tempSymbol);
+                commonArr[counter][1] = symNumber;
+                tempSymbol = str.charAt(i);
+                counter++;
+                symNumber = 0;
+                if (i == str.length() - 1) {
+                    commonArr[counter][0] = Character.getNumericValue(tempSymbol);
+                    commonArr[counter][1] = 0;
+                }
+            } else {
                 symNumber++;
 
-            } //else {
-//                result = result + digitPanel[tempSymbol][symNumber];
-//                symNumber = 0;
-//                tempSymbol = strArray[i];
- //               if (i == str.length() - 1) return result + digitPanel[tempSymbol][symNumber];
- //           }
+
+                if (i == str.length() - 1) {
+                    commonArr[counter][0] = Character.getNumericValue(str.charAt(i));
+                    commonArr[counter][1] = symNumber;
+                }
+//                if (symNumber == digitPanel[Character.getNumericValue(tempSymbol)].length - 1) {
+//                    symNumber = 0;
+//                    counter++;
+//                }
+
+            }
 
         }
+        for (int i = 0; i < commonArr.length; i++) {
+            System.out.println(Arrays.toString(commonArr[i]));
 
+        }
 
         return  result;
     }
