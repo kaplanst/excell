@@ -7,10 +7,11 @@ import java.util.List;
 
 public class justTest {
     public static void main(String[] args) {
-        System.out.println(phoneWords("55886444483333"));
+        System.out.println(phoneWords(null));
 
     }
     public static String phoneWords(String str) {
+        if (str == null) return "";
         if (str.length() == 0) return "";
         String result = "";
         int symNumber = 0; // quantity of symbols
@@ -34,9 +35,18 @@ public class justTest {
                 }
              else {
                 symNumber++;
+                if (symNumber == digitPanel[Character.getNumericValue(tempSymbol)].length) {
+                    sym.add(Character.getNumericValue(tempSymbol));
+                    num.add(symNumber-1);
+                    symNumber = 0;
+                }
                 if (i == str.length() - 1) num.add(symNumber);
 
             }
+
+        }
+                for (int i = 0; i < sym.size(); i++) {
+            result += digitPanel[sym.get(i)][num.get(i)];
         }
 
         System.out.println(sym);
