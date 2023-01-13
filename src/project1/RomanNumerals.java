@@ -26,39 +26,42 @@ public class RomanNumerals {
         int[] value = new int[] {1, 5, 10, 50, 100, 500, 1000};
         String[] romSymb = new String[] {"I", "V", "X", "L", "C", "D", "M"};
         String str = "";
-        switch(dig) {
-            case 0:
-                temp.add(0);
-                break;
-            case 1:
-                temp.add(tens); break;
-            case 2:
-                temp.add(tens);
-                temp.add(tens); break;
-            case 3:
+        switch (dig) {
+            case 0 -> temp.add(0);
+            case 1 -> temp.add(tens);
+            case 2 -> {
                 temp.add(tens);
                 temp.add(tens);
-                temp.add(tens); break;
-            case 4:
+            }
+            case 3 -> {
                 temp.add(tens);
-                temp.add(5 * tens); break;
-            case 5:
-                temp.add(5 * tens); break;
-            case 6:
+                temp.add(tens);
+                temp.add(tens);
+            }
+            case 4 -> {
+                temp.add(tens);
                 temp.add(5 * tens);
-                temp.add(tens); break;
-            case 7:
+            }
+            case 5 -> temp.add(5 * tens);
+            case 6 -> {
                 temp.add(5 * tens);
                 temp.add(tens);
-                temp.add(tens); break;
-            case 8:
+            }
+            case 7 -> {
                 temp.add(5 * tens);
                 temp.add(tens);
                 temp.add(tens);
-                temp.add(tens); break;
-            case 9:
+            }
+            case 8 -> {
+                temp.add(5 * tens);
+                temp.add(tens);
+                temp.add(tens);
+                temp.add(tens);
+            }
+            case 9 -> {
                 temp.add(10 * tens);
-                temp.add(tens); break;
+                temp.add(tens);
+            }
         }
         System.out.println(temp);
         for (int i = 0; i < temp.size(); i++) {
