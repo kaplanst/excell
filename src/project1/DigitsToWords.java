@@ -2,7 +2,7 @@ package project1;
 
 public class DigitsToWords {
     public static void main(String[] args) {
-        System.out.println(millions(33334323250456350L));
+        System.out.println(millions(356000));
     }
 
     public static String millions(long allDig) {

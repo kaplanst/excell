@@ -5,23 +5,23 @@ import java.util.List;
 
 public class RomanNumerals {
     public static void main(String[] args) {
-        System.out.println(solution(989));
+        System.out.println(solution(0));
     }
 
     public static String solution(int n) {
         int tens = 10;
         String res ="";
-        while (n > 0) {
-            System.out.println(n);
-            res = roma(n%tens, tens/10) + res;
-            n = n / tens;
+        for (int i = n; i >0 ; i=i/10) {
+            res = roma(i%10, tens/10) + res;
             tens = tens *10;
         }
-
         return res;
     }
 
     public static String roma(int dig, int tens){
+//        System.out.println(dig);
+//        return "" + dig;
+
         List<Integer> temp = new ArrayList<>();
         int[] value = new int[] {1, 5, 10, 50, 100, 500, 1000};
         String[] romSymb = new String[] {"I", "V", "X", "L", "C", "D", "M"};
@@ -59,11 +59,12 @@ public class RomanNumerals {
                 temp.add(tens);
             }
             case 9 -> {
+
                 temp.add(10 * tens);
                 temp.add(tens);
             }
         }
-        System.out.println(temp);
+ //       System.out.println(temp);
         for (int i = 0; i < temp.size(); i++) {
             for (int j = 0; j < value.length; j++) {
                 if (temp.get(i) == value[j]) str += romSymb[j];
