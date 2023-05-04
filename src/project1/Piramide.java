@@ -6,9 +6,10 @@ public class Piramide {
         String p = "          ";
         for (int i = 0; i < 10; i++) {
             if (i == 9) s = "__________________";
-            System.out.println(p + "/" + s +"\\\\\\");
+            System.out.println(p + "/" + s +"\\");
             s = s + "  ";
             p = p.substring(1);
+
         }
 
     }
