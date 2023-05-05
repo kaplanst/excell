@@ -6,15 +6,15 @@ import java.util.Arrays;
 import java.util.List;
 
 public class justTest {
-    public static void main(String[] args) {
-     int num = 86;
-     int res = 0;
-     while (num > 0) {
-         res += num % 10;
-         num = num / 10;
-     }
-        System.out.println(res);
+    public static void main(String[] args) throws InterruptedException {
 
+        String s = "sss";
+        for (int i = 0; i < s.length(); i++) {
+            System.out.println(s);
+            s = s + 's';
+            Thread.sleep(2000);
+
+        }
 
     }
 
