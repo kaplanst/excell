@@ -6,16 +6,14 @@ import java.util.Arrays;
 import java.util.List;
 
 public class justTest {
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
+        System.out.println(tankVol(5, 7, 3848));
 
-        String s = "sss";
-        for (int i = 0; i < s.length(); i++) {
-            System.out.println(s);
-            s = s + 's';
-            Thread.sleep(2000);
+    }
+    public static int tankVol(int h, int d, int vt) {
 
-        }
 
+        return 0;
     }
 
 }
