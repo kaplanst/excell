@@ -7,13 +7,23 @@ import java.util.List;
 
 public class justTest {
     public static void main(String[] args) {
-        System.out.println(tankVol(5, 7, 3848));
+        double d = 7;
+        double h = 6;
+        double s = Math.PI * d * d / 4;
+        double corner = Math.acos((d/2-h)/(d/2)) * 2;
+        double stringle = Math.sqrt((d/2)*(d/2)- (d/2 - h)*(d/2 - h)) * (d/2 - h);
+        double ssegment = (d*d*corner/8) - stringle;
+        System.out.println(ssegment);
+        System.out.println(s);
 
-    }
-    public static int tankVol(int h, int d, int vt) {
 
 
-        return 0;
+//        System.out.println(corner);
+//        double inDegrees = Math.toDegrees(corner);
+//        System.out.println(inDegrees);
+
     }
 
 }
+//    double inRadians = Math.toRadians(inDegrees);
+//    double inDegrees = Math.toDegrees(inRadians);
