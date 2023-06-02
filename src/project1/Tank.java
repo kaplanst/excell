@@ -1,7 +1,9 @@
 package project1;
 
+import java.net.MalformedURLException;
+
 public class Tank {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws MalformedURLException {
         System.out.println(tankVol(2, 7, 3848));
 
     }
