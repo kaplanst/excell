@@ -10,15 +10,14 @@ import java.net.URLConnection;
 
 public class ApiGetText {
     public static void main(String[] args) throws IOException {
-        String country = "Iraq";
-        String output  = getUrlContents("https://jsonmock.hackerrank.com/api/countries?name=" + country);
+        String output  = getUrlContents("Japan");
         String capital = output.substring(output.lastIndexOf("capital\":\"") + 10);
         capital = capital.substring(0, capital.indexOf('"'));
         System.out.println(capital);
     }
 
     private static String getUrlContents(String theUrl) throws IOException {
-        URL url = new URL(theUrl);
+        URL url = new URL("https://jsonmock.hackerrank.com/api/countries?name=" + theUrl);
         URLConnection con = url.openConnection();
         InputStream is = con.getInputStream();
         String content = null;
