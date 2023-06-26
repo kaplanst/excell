@@ -20,7 +20,7 @@ public class decrisArray {
 
         // Print the elements of LinkedHashSet
         System.out.println(set);
-        List<Integer> li = new ArrayList<>();
-        System.out.println(li);
+//        List<Integer> li = new ArrayList<>();
+//        System.out.println(li);
     }
 }
