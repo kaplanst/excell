@@ -19,7 +19,7 @@ public class JavaScriptExec {
 
         JavascriptExecutor jse = (JavascriptExecutor)driver;
         jse.executeScript("window.scrollBy(0, 1000)", "");
-        Thread.sleep(5);
+        Thread.sleep(5000);
         jse.executeScript("window.scrollBy(0, -500)", "");
 
 

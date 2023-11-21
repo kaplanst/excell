@@ -5,29 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1798b131-a743-41ff-be21-5cf75bd1dd39" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../CodeWarsAndTests/src/main/java/project1/decreaseArraySize.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/MyStepdefs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/add_to_cart.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/dummy.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Excell/src/main/java/ApiGetText.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../awesomecucumber/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../awesomecucumber/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../awesomecucumber/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../awesomecucumber/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../awesomecucumber/awesomecucumber.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../awesomecucumber/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CodeWarsAndTests/src/main/java/project1/decrisArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CodeWarsAndTests/src/main/java/project1/decrisArray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CodeWarsAndTests/src/main/java/project1/justTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CodeWarsAndTests/src/main/java/project1/justTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Excell/src/main/java/ExcellReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Excell/src/main/java/ExcellReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Excell/target/classes/ExcellReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Excell/target/classes/ExcellReader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Excell/target/classes/Screenshots.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Excell/target/classes/Screenshots.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWarsAndTests/src/test/java/project1/NOKtheBestTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Excell/src/main/java/FileWork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CodeWarsAndTests/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CodeWarsAndTests/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CodeWarsAndTests/src/main/java/project1/NOKtheBest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CodeWarsAndTests/src/main/java/project1/NOKtheBest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

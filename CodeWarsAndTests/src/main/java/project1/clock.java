@@ -1,5 +1,5 @@
 package project1;
-
+//Converting seconds to days
 public class clock {
     public static void main(String[] args) {
 

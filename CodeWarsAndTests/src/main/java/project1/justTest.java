@@ -10,17 +10,25 @@ import java.net.URLConnection;
 
 public class justTest {
     public static void main(String[] args) throws IOException {
-
-        URL url = new URL("https://jsonmock.hackerrank.com/api/countries?name=italy");
-        URLConnection con = url.openConnection();
-        InputStream is = con.getInputStream();
-        String content = null;
-        try (BufferedReader br = new BufferedReader(new InputStreamReader(is))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                content = line;
-            }
+        String shrt = "";
+        String str = ("Early bird catches more food");
+        for (int i = 0; i < str.length(); i++) {
+            if (!shrt.contains("" + str.charAt(i))) {
+                shrt += str.charAt(i);
+            } else continue;
         }
-        System.out.println(content);
+        System.out.println(shrt);
+        char chr;
+        for (int i = 0; i < shrt.length() - 1; i++) {
+            for (int j = i+1; j < shrt.length(); j++) {
+                if (shrt.charAt(i) > shrt.charAt(j)) {
+                    chr = shrt.charAt(i);
+                    shrt = shrt.substring(0, i) + shrt.charAt(j) + shrt.substring(i+1);
+                    shrt = shrt.substring(0, j) + chr + shrt.substring(j+1);
+                }
+            }
+
+        }
+        System.out.println(shrt);
     }
 }
