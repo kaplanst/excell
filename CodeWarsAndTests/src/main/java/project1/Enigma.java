@@ -4,7 +4,7 @@ import java.util.Locale;
 
 public class Enigma {
     public static void main(String[] args) {
-        System.out.println(cript("Hello, World!", 56));
+        System.out.println(cript("Hello, World!", 1));
     }
 
     public static String cript(String input, int key) {

@@ -2,7 +2,7 @@ package project1;
 
 public class Repetition {
     public static void main(String[] args) {
-        String str = "clopclopclop";
+        String str = "clopsclopsclops";
         System.out.println(star(str));
     }
     public static String star(String str) {
