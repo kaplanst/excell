@@ -1,5 +1,6 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -17,7 +18,7 @@ public class Screenshots {
         driver.manage().window().maximize();
 
         driver.get("http://exler.ru");
-
+        driver.getCurrentUrl();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
         try {

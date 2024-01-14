@@ -43,7 +43,6 @@ public class PerfectTable {
                 }
                 System.out.println();
             }
-            System.out.println();
         }
     }
 }

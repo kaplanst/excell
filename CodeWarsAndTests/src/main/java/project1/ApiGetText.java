@@ -1,32 +1,21 @@
 package project1;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLConnection;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+
+import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.with;
 
 public class ApiGetText {
-    public static void main(String[] args) throws IOException {
-        String output  = getUrlContents("Japan");
-        String capital = output.substring(output.lastIndexOf("capital\":\"") + 10);
-        capital = capital.substring(0, capital.indexOf('"'));
-        System.out.println(capital);
+    public static void main(String[] args) {
+        System.out.println(getCapital("kazakhstan"));
     }
 
-    private static String getUrlContents(String theUrl) throws IOException {
-        URL url = new URL("https://jsonmock.hackerrank.com/api/countries?name=" + theUrl);
-        URLConnection con = url.openConnection();
-        InputStream is = con.getInputStream();
-        String content = null;
-        try (BufferedReader br = new BufferedReader(new InputStreamReader(is))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                content = line;
-            }
-        }
-        return content;
+    public static String getCapital (String country) {
+        RequestSpecification requestSpecification = given().
+                baseUri("https://jsonmock.hackerrank.com/api/countries").
+                param("name", country);
+        Response response = requestSpecification.get().then().log().all().extract().response();
+        return (response.path("data.capital").toString());
     }
 }
